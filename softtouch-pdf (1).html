@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SoftTouch — Brand Document 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --peach:#FFB5A7;--peachD:#F28482;
+  --mint:#B8E0D2;--mintD:#72B89E;
+  --lav:#D4C5F9;--lavD:#A78BDB;
+  --sun:#FFD166;--sunD:#F4A836;
+  --cream:#FFF8F0;--off:#FEFCFA;
+  --dark:#1E1E2E;--darkS:#2D2D40;
+  --grey:#8E8E9E;--greyL:#E8E8EE;
+  --Fd:'Fraunces',Georgia,serif;
+  --Fb:'Sora',sans-serif;
+}
+body{font-family:var(--Fb);color:var(--dark);background:#fff;overflow-x:hidden}
+section{width:100%;position:relative;overflow:hidden}
+.wrap{max-width:1100px;margin:0 auto;position:relative;z-index:2}
+h1,h2,h3,h4{font-weight:400}
+p{margin:0}
+button{cursor:pointer;border:none;font-family:var(--Fb)}
+.label{font-family:var(--Fb);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--grey);margin-bottom:12px}
+.italic-grad{font-style:italic;background:linear-gradient(135deg,var(--peachD),var(--lavD));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gradient-text-warm{font-style:italic;background:linear-gradient(135deg,var(--peach),var(--sun));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.section-h2{font-family:var(--Fd);font-size:clamp(28px,4vw,44px);line-height:1.15;color:var(--dark);margin-bottom:40px}
+/* ── PRINT ── */
+@media print{
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  .no-print{display:none!important}
+  .ba-before,.ba-after{display:grid!important}
+  .ba-toggle-row{display:none!important}
+  .ba-section-label{display:block!important}
+  #hero{page-break-after:always}
+  #before-after,#brand-world,#colors,#typography,#products{page-break-after:always}
+  .product-grid{grid-template-columns:repeat(4,1fr)!important}
+}
+/* ── SAVE BANNER ── */
+.save-banner{background:var(--dark);color:#fff;text-align:center;padding:14px 24px;font-size:13px;font-family:var(--Fb)}
+.save-banner strong{color:var(--peach)}
+/* ── HERO ── */
+#hero{
+  min-height:100vh;
+  background:linear-gradient(160deg,#1E1E2E 0%,#2D2D40 50%,#2A2A44 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:80px 24px;text-align:center;
+}
+.hero-pill{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,0.05);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.1);padding:8px 20px;border-radius:30px;margin-bottom:40px;
+}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--peach);flex-shrink:0}
+.hero-pill-text{font-size:11px;letter-spacing:2px;color:rgba(255,255,255,0.55);text-transform:uppercase}
+/* Logo */
+.logo-wrap{position:relative;display:inline-block}
+.logo-deco{position:absolute;pointer-events:none}
+.logo-h1{font-family:var(--Fd);font-size:clamp(52px,9vw,96px);font-weight:400;line-height:0.95;letter-spacing:-0.02em;color:#fff}
+.logo-italic{font-style:italic;font-weight:600;background:linear-gradient(135deg,var(--peach),var(--lav));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--peach),var(--sunD));margin-left:4px;vertical-align:super}
+.logo-tag{font-family:var(--Fb);letter-spacing:4px;text-transform:uppercase;font-weight:300;margin-top:14px}
+.hero-sub{font-family:var(--Fb);font-size:17px;line-height:1.8;color:rgba(255,255,255,0.47);max-width:480px;margin:36px auto 0;font-weight:300}
+.scroll-cue{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(255,181,167,0.35);display:flex;align-items:center;justify-content:center;margin:50px auto 0;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+.scroll-arr{color:var(--peach);font-size:18px}
+/* gradient orbs */
+.orb{position:absolute;border-radius:50%;pointer-events:none}
+/* ── BEFORE AFTER ── */
+#before-after{padding:100px 24px;background:var(--cream)}
+.ba-toggle-row{display:flex;margin-bottom:48px}
+.ba-toggle{display:inline-flex;background:#fff;border-radius:30px;padding:4px;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.ba-btn{font-size:13px;font-weight:500;padding:10px 28px;border-radius:26px;transition:all .3s;background:transparent;color:var(--grey)}
+.ba-btn.active{background:var(--dark);color:#fff}
+.ba-before,.ba-after{display:none;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.ba-before.show,.ba-after.show{display:grid}
+.ba-section-label{display:none;font-family:var(--Fb);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;padding:6px 14px;border-radius:20px;display:inline-block}
+.ba-section-label.before-lbl{background:rgba(242,132,130,0.15);color:var(--peachD);display:none}
+.ba-section-label.after-lbl{background:rgba(184,224,210,0.2);color:var(--mintD);display:none}
+.ba-card{background:#fff;border-radius:16px;padding:28px 24px;position:relative;overflow:hidden}
+.ba-card-bar{position:absolute;top:0;left:0;right:0;height:3px}
+.ba-card-tag{font-size:10px;font-weight:600;letter-spacing:1px}
+.ba-card-h4{font-size:15px;font-weight:600;color:var(--dark);margin:10px 0 6px}
+.ba-card-p{font-size:13px;line-height:1.6;color:var(--grey)}
+.ba-icon-box{width:32px;height:32px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;font-size:16px}
+/* ── BRAND WORLD ── */
+#brand-world{padding:100px 24px;background:var(--dark)}
+.bw-sub{font-family:var(--Fb);font-size:16px;line-height:1.8;color:rgba(255,255,255,0.4);max-width:500px;margin-bottom:60px}
+.trait-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:60px}
+.trait-card{padding:28px 22px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.06);border-radius:20px;text-align:center;transition:all .3s}
+.trait-card:hover{background:rgba(255,181,167,0.09);border-color:rgba(255,181,167,0.2)}
+.trait-emoji{font-size:32px;display:block;margin-bottom:12px}
+.trait-name{font-family:var(--Fd);font-size:20px;font-weight:500;font-style:italic;margin:0 0 6px}
+.trait-desc{font-size:12px;color:rgba(255,255,255,0.34);margin:0}
+.tagline-box{padding:36px 32px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:20px}
+.tagline-label{font-size:10px;letter-spacing:2px;color:var(--peach);text-transform:uppercase;margin-bottom:20px}
+.tagline-row{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.tagline-num{font-size:10px;color:var(--grey);min-width:20px}
+.tagline-text{font-family:var(--Fd);font-size:22px;font-style:italic;color:#fff}
+.tagline-text.muted{opacity:.5}
+.tagline-rec{font-size:9px;background:rgba(255,181,167,0.2);color:var(--peach);padding:3px 10px;border-radius:10px;letter-spacing:1px;text-transform:uppercase}
+/* ── COLORS ── */
+#colors{padding:100px 24px;background:var(--cream)}
+.color-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-bottom:48px}
+.color-swatch{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.04)}
+.color-box{height:90px;position:relative;overflow:hidden}
+.color-box-inner{width:100%;height:100%}
+.color-info{padding:14px 16px}
+.color-name{font-size:12px;font-weight:600;color:var(--dark);margin:0 0 2px}
+.color-hex{font-size:11px;color:var(--grey);margin:0 0 2px}
+.color-role{font-size:10px;color:var(--grey);opacity:.7;margin:0}
+.cat-map-box{background:#fff;border-radius:20px;padding:32px 28px;box-shadow:0 2px 16px rgba(0,0,0,0.04)}
+.cat-map-label{font-size:10px;font-weight:600;letter-spacing:2px;color:var(--grey);text-transform:uppercase;margin-bottom:20px}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.cat-row{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px}
+.cat-dot{width:36px;height:36px;border-radius:10px;flex-shrink:0}
+.cat-line{font-size:13px;font-weight:600;color:var(--dark);margin:0 0 2px}
+.cat-products{font-size:11px;color:var(--grey);margin:0}
+/* ── TYPOGRAPHY ── */
+#typography{padding:100px 24px;background:#fff}
+.typo-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:48px}
+@media(max-width:700px){.typo-grid{grid-template-columns:1fr}}
+.typo-card{padding:40px 32px;background:var(--cream);border-radius:24px;position:relative;overflow:hidden}
+.typo-cat{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+.typo-big{line-height:1.1;margin:0 0 8px}
+.typo-italic-sub{margin:0 0 16px}
+.typo-desc{font-size:13px;line-height:1.6;color:var(--grey);position:relative;z-index:1}
+.logo-demo-bar{padding:48px 32px;background:var(--dark);border-radius:24px;display:flex;align-items:center;justify-content:center;gap:60px;flex-wrap:wrap;position:relative;overflow:hidden}
+.logo-divider{width:1px;height:80px;background:rgba(255,255,255,0.1)}
+.logo-light-box{text-align:center;padding:24px 40px;background:var(--cream);border-radius:16px}
+.demo-label{font-size:9px;letter-spacing:2px;color:var(--grey);text-transform:uppercase;margin-bottom:12px}
+/* logo medium */
+.logo-md .logo-h1{font-size:36px}
+.logo-md .logo-dot{width:6px;height:6px}
+.logo-md .logo-tag{font-size:10px;margin-top:8px}
+/* ── PRODUCTS ── */
+#products{padding:100px 24px;background:var(--off)}
+.products-head{text-align:center;margin-bottom:60px}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+.prod-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06);transition:transform .3s,box-shadow .3s}
+.prod-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,0.1)}
+.prod-top{padding:32px 24px;min-height:220px;position:relative;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.prod-blob{position:absolute;top:-30px;right:-40px;opacity:.6;pointer-events:none}
+.prod-cat-pill{background:rgba(0,0,0,0.08);padding:6px 14px;border-radius:20px;display:inline-flex;align-self:flex-start;position:relative;z-index:1}
+.prod-cat-text{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--dark)}
+.prod-bottle-wrap{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;margin:16px 0}
+.prod-bottle{width:80px;height:100px;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px;position:relative;border:2px solid rgba(0,0,0,0.08)}
+.prod-bottle-logo-st{font-family:var(--Fd);font-size:11px;font-weight:400;color:var(--dark);opacity:.7;line-height:1}
+.prod-bottle-logo-it{font-style:italic;font-weight:600}
+.prod-bottle-line{height:1.5px;border-radius:2px;margin:6px 0;width:30px}
+.prod-bottle-name{font-size:7px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--dark);text-align:center}
+.prod-ingredient{font-size:11px;color:var(--dark);opacity:.5;position:relative;z-index:1}
+.prod-bottom{padding:16px 24px 20px}
+.prod-name{font-size:14px;font-weight:600;color:var(--dark);margin:0 0 4px}
+.prod-count{font-size:12px;color:var(--grey);margin:0}
+/* ── SOCIAL ── */
+#social{padding:100px 24px;background:linear-gradient(160deg,rgba(255,181,167,0.08),rgba(212,197,249,0.08),rgba(184,224,210,0.08))}
+.social-head{text-align:center;margin-bottom:48px}
+.insta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:500px;margin:0 auto;border-radius:20px;overflow:hidden}
+.insta-post{aspect-ratio:1/1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px;position:relative}
+.insta-emoji{font-size:24px;margin-bottom:6px}
+.insta-title{font-family:var(--Fd);font-size:13px;font-style:italic;font-weight:500;margin:0 0 2px}
+.insta-sub{font-size:9px;margin:0}
+.social-caption{font-size:14px;line-height:1.7;color:var(--grey);max-width:440px;margin:32px auto 0;text-align:center}
+/* ── COMPETITORS ── */
+#competitors{padding:100px 24px;background:#fff}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.comp-card{padding:24px 20px;background:var(--cream);border-radius:20px;position:relative;overflow:hidden}
+.comp-card.highlight{background:var(--dark)}
+.comp-name{font-size:15px;font-weight:600;color:var(--dark);margin:0 0 8px}
+.comp-name.disp{font-family:var(--Fd);font-size:20px;font-weight:500;font-style:italic;color:var(--peach)}
+.comp-vibe{font-size:12px;line-height:1.5;color:var(--grey);margin:0 0 10px}
+.comp-vibe.light{color:rgba(255,255,255,0.47)}
+.comp-gap-box{padding:6px 12px;background:rgba(0,0,0,0.06);border-radius:8px;display:inline-block}
+.comp-gap-box.highlight{background:rgba(255,181,167,0.15)}
+.comp-gap{font-size:11px;color:var(--dark);font-weight:500;margin:0}
+.comp-gap.hl{color:var(--peach)}
+/* ── FOOTER ── */
+#footer-section{padding:80px 24px 60px;background:var(--dark);text-align:center;position:relative;overflow:hidden}
+.footer-stats{display:flex;justify-content:center;gap:32px;margin-top:40px;flex-wrap:wrap}
+.stat-val{font-family:var(--Fd);font-size:22px;font-weight:500;font-style:italic;color:var(--peach);margin:0 0 4px}
+.stat-desc{font-size:11px;color:rgba(255,255,255,0.27);margin:0}
+.footer-divider{width:60px;height:1px;background:rgba(255,255,255,0.1);margin:40px auto 20px}
+.footer-credit{font-size:12px;color:rgba(255,255,255,0.2)}
+/* ── DECO absolute position helpers ── */
+.deco{position:absolute;pointer-events:none;overflow:visible}
+</style>
+</head>
+<body>
+
+<!-- SAVE BANNER -->
+<div class="save-banner no-print">
+  To save as PDF: Press <strong>Ctrl+P</strong> (Win) or <strong>Cmd+P</strong> (Mac) → Choose <strong>"Save as PDF"</strong> → Set paper to A3 Landscape or A4 Portrait for best results.
+</div>
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section id="hero">
+  <!-- Gradient orbs -->
+  <div class="orb" style="width:400px;height:400px;background:radial-gradient(circle,rgba(255,181,167,0.13),transparent 70%);top:-10%;right:-5%"></div>
+  <div class="orb" style="width:350px;height:350px;background:radial-gradient(circle,rgba(184,224,210,0.11),transparent 70%);bottom:-5%;left:-5%"></div>
+  <!-- Deco shapes -->
+  <div class="deco" style="top:8%;left:5%;opacity:.4">
+    <svg width="120" height="120" viewBox="0 0 80 80" fill="none">
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(0 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(60 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(120 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(180 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(240 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(300 40 40)"/>
+      <circle cx="40" cy="40" r="8" fill="#FFB5A7" opacity=".5"/>
+    </svg>
+  </div>
+  <div class="deco" style="bottom:12%;right:8%;opacity:.3">
+    <svg width="90" height="90" viewBox="0 0 80 80" fill="none">
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#D4C5F9" opacity=".25" transform="rotate(0 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#D4C5F9" opacity=".25" transform="rotate(60 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#D4C5F9" opacity=".25" transform="rotate(120 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#D4C5F9" opacity=".25" transform="rotate(180 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#D4C5F9" opacity=".25" transform="rotate(240 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#D4C5F9" opacity=".25" transform="rotate(300 40 40)"/>
+      <circle cx="40" cy="40" r="8" fill="#D4C5F9" opacity=".5"/>
+    </svg>
+  </div>
+  <div class="deco" style="top:20%;right:12%;opacity:.3;transform:rotate(25deg)">
+    <svg width="80" height="80" viewBox="0 0 60 60" fill="none">
+      <path d="M30 5 C15 15,5 30,15 50 C20 45,25 35,30 25 C35 35,40 45,45 50 C55 30,45 15,30 5Z" fill="#B8E0D2" opacity=".7"/>
+      <path d="M30 15 L30 45" stroke="#B8E0D299" stroke-width="1.5"/>
+      <path d="M30 25 L22 20" stroke="#B8E0D266" stroke-width="1"/>
+      <path d="M30 30 L38 25" stroke="#B8E0D266" stroke-width="1"/>
+      <path d="M30 35 L23 32" stroke="#B8E0D266" stroke-width="1"/>
+    </svg>
+  </div>
+  <div class="deco" style="bottom:25%;left:10%;opacity:.3">
+    <svg width="60" height="60" viewBox="0 0 50 50" fill="none">
+      <path d="M25 5C25 5,10 22,10 32C10 40,17 47,25 47C33 47,40 40,40 32C40 22,25 5,25 5Z" fill="#F28482" opacity=".6"/>
+      <ellipse cx="20" cy="30" rx="4" ry="6" fill="white" opacity=".3"/>
+    </svg>
+  </div>
+  <div class="deco" style="top:15%;left:35%;opacity:.25">
+    <svg width="50" height="50" viewBox="0 0 40 40" fill="none">
+      <path d="M20 2L23 15L36 12L25 20L36 28L23 25L20 38L17 25L4 28L15 20L4 12L17 15Z" fill="#FFD166" opacity=".7"/>
+    </svg>
+  </div>
+  <div class="deco" style="bottom:30%;right:30%;opacity:.3">
+    <svg width="35" height="35" viewBox="0 0 40 40" fill="none">
+      <path d="M20 2L23 15L36 12L25 20L36 28L23 25L20 38L17 25L4 28L15 20L4 12L17 15Z" fill="#D4C5F9" opacity=".7"/>
+    </svg>
+  </div>
+
+  <div style="position:relative;z-index:2;text-align:center;max-width:800px;margin:0 auto">
+    <div class="hero-pill">
+      <div class="hero-dot"></div>
+      <span class="hero-pill-text">Brand Rebirth 2026</span>
+    </div>
+    <!-- LOGO LARGE -->
+    <div class="logo-wrap" style="display:inline-block;text-align:center">
+      <div class="logo-deco" style="top:-20px;left:15%;transform:rotate(-30deg);opacity:.6">
+        <svg width="50" height="50" viewBox="0 0 60 60" fill="none">
+          <path d="M30 5C15 15,5 30,15 50C20 45,25 35,30 25C35 35,40 45,45 50C55 30,45 15,30 5Z" fill="#B8E0D2" opacity=".7"/>
+          <path d="M30 15L30 45" stroke="#B8E0D299" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="logo-deco" style="top:-10px;right:18%;opacity:.5">
+        <svg width="35" height="35" viewBox="0 0 50 50" fill="none">
+          <path d="M25 5C25 5,10 22,10 32C10 40,17 47,25 47C33 47,40 40,40 32C40 22,25 5,25 5Z" fill="#FFB5A7" opacity=".6"/>
+          <ellipse cx="20" cy="30" rx="4" ry="6" fill="white" opacity=".3"/>
+        </svg>
+      </div>
+      <div class="logo-deco" style="bottom:5px;left:22%;opacity:.5">
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+          <path d="M20 2L23 15L36 12L25 20L36 28L23 25L20 38L17 25L4 28L15 20L4 12L17 15Z" fill="#FFD166" opacity=".7"/>
+        </svg>
+      </div>
+      <h1 class="logo-h1">soft<span class="logo-italic">touch</span><span class="logo-dot"></span></h1>
+      <p class="logo-tag" style="font-size:12px;color:rgba(255,255,255,0.53)">salon results at home</p>
+    </div>
+    <p class="hero-sub">Transforming from generic personal care into a vibrant, confident self-care brand that Gen Z &amp; millennials actually want on their shelf and their feed.</p>
+    <div class="scroll-cue no-print"><span class="scroll-arr">↓</span></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     BEFORE / AFTER
+══════════════════════════════════════════════ -->
+<section id="before-after">
+  <div class="wrap" style="padding:0 24px">
+    <p class="label">The Transformation</p>
+    <h2 class="section-h2">From catalogue to <span class="italic-grad">culture brand</span></h2>
+    <!-- Toggle -->
+    <div class="ba-toggle-row">
+      <div class="ba-toggle">
+        <button class="ba-btn active" id="btnBefore" onclick="showBA('before')">Current Brand</button>
+        <button class="ba-btn" id="btnAfter" onclick="showBA('after')">New Identity</button>
+      </div>
+    </div>
+    <!-- BEFORE -->
+    <div class="ba-before show" id="baBefore">
+      <div class="ba-card" style="border:1px solid rgba(242,132,130,0.13)">
+        <div class="ba-card-bar" style="background:#F28482;opacity:.4"></div>
+        <span class="ba-card-tag" style="color:#F28482">ISSUE 1</span>
+        <h4 class="ba-card-h4">Stock photography everywhere</h4>
+        <p class="ba-card-p">Generic model photos that feel dated and salon-supply oriented</p>
+      </div>
+      <div class="ba-card" style="border:1px solid rgba(242,132,130,0.13)">
+        <div class="ba-card-bar" style="background:#F28482;opacity:.4"></div>
+        <span class="ba-card-tag" style="color:#F28482">ISSUE 2</span>
+        <h4 class="ba-card-h4">Visual chaos on packaging</h4>
+        <p class="ba-card-p">Multiple fonts, excessive text, competing colors on every product</p>
+      </div>
+      <div class="ba-card" style="border:1px solid rgba(242,132,130,0.13)">
+        <div class="ba-card-bar" style="background:#F28482;opacity:.4"></div>
+        <span class="ba-card-tag" style="color:#F28482">ISSUE 3</span>
+        <h4 class="ba-card-h4">No recognizable brand system</h4>
+        <p class="ba-card-p">'Spring Soft Touch' branding is inconsistent across the range</p>
+      </div>
+      <div class="ba-card" style="border:1px solid rgba(242,132,130,0.13)">
+        <div class="ba-card-bar" style="background:#F28482;opacity:.4"></div>
+        <span class="ba-card-tag" style="color:#F28482">ISSUE 4</span>
+        <h4 class="ba-card-h4">Catalogue, not lifestyle</h4>
+        <p class="ba-card-p">Products feel like they belong in a B2B catalogue, not on Instagram</p>
+      </div>
+    </div>
+    <!-- AFTER -->
+    <div class="ba-after" id="baAfter">
+      <div class="ba-card" style="border:1px solid rgba(184,224,210,0.27)">
+        <div class="ba-card-bar" style="background:linear-gradient(90deg,#B8E0D2,transparent)"></div>
+        <div class="ba-icon-box" style="background:rgba(184,224,210,0.2)">🌿</div>
+        <h4 class="ba-card-h4">Custom illustration system</h4>
+        <p class="ba-card-p">Ownable botanical &amp; droplet motifs that replace generic stock imagery</p>
+      </div>
+      <div class="ba-card" style="border:1px solid rgba(212,197,249,0.27)">
+        <div class="ba-card-bar" style="background:linear-gradient(90deg,#D4C5F9,transparent)"></div>
+        <div class="ba-icon-box" style="background:rgba(212,197,249,0.2)">✨</div>
+        <h4 class="ba-card-h4">Typography-led packaging</h4>
+        <p class="ba-card-p">Fraunces serif + Sora sans-serif, clean hierarchy, breathing space</p>
+      </div>
+      <div class="ba-card" style="border:1px solid rgba(255,181,167,0.27)">
+        <div class="ba-card-bar" style="background:linear-gradient(90deg,#FFB5A7,transparent)"></div>
+        <div class="ba-icon-box" style="background:rgba(255,181,167,0.2)">🎨</div>
+        <h4 class="ba-card-h4">Category color coding</h4>
+        <p class="ba-card-p">Each product line gets its own vibrant color world, instantly recognizable</p>
+      </div>
+      <div class="ba-card" style="border:1px solid rgba(255,209,102,0.27)">
+        <div class="ba-card-bar" style="background:linear-gradient(90deg,#FFD166,transparent)"></div>
+        <div class="ba-icon-box" style="background:rgba(255,209,102,0.2)">📱</div>
+        <h4 class="ba-card-h4">Social-first design DNA</h4>
+        <p class="ba-card-p">Every touchpoint designed to be shared, saved, and screenshot-worthy</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     BRAND WORLD
+══════════════════════════════════════════════ -->
+<section id="brand-world">
+  <div class="deco" style="top:5%;right:5%;opacity:.15">
+    <svg width="150" height="150" viewBox="0 0 80 80" fill="none">
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(0 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(60 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(120 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(180 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(240 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(300 40 40)"/>
+      <circle cx="40" cy="40" r="8" fill="#FFB5A7" opacity=".5"/>
+    </svg>
+  </div>
+  <div class="deco" style="bottom:10%;left:3%;opacity:.15;transform:rotate(-20deg)">
+    <svg width="100" height="100" viewBox="0 0 60 60" fill="none">
+      <path d="M30 5C15 15,5 30,15 50C20 45,25 35,30 25C35 35,40 45,45 50C55 30,45 15,30 5Z" fill="#B8E0D2" opacity=".7"/>
+      <path d="M30 15L30 45" stroke="#B8E0D299" stroke-width="1.5"/>
+    </svg>
+  </div>
+  <div class="wrap" style="padding:0 24px">
+    <p class="label" style="color:var(--peach)">Brand Positioning</p>
+    <h2 style="font-family:var(--Fd);font-size:clamp(32px,5vw,52px);font-weight:400;color:#fff;line-height:1.15;margin-bottom:16px;max-width:600px">
+      Your skin,<br>your <span class="gradient-text-warm">quick fix.</span>
+    </h2>
+    <p class="bw-sub">SoftTouch owns the "salon results at home" space. Quick skincare solutions, DIY beauty rituals, effective self-care. No complicated 10-step routines. Just smart products that work.</p>
+    <!-- Personality traits -->
+    <div class="trait-grid">
+      <div class="trait-card">
+        <span class="trait-emoji">💅</span>
+        <h4 class="trait-name" style="color:var(--peach)">Playful</h4>
+        <p class="trait-desc">Not clinical, not boring</p>
+      </div>
+      <div class="trait-card">
+        <span class="trait-emoji">✨</span>
+        <h4 class="trait-name" style="color:var(--lav)">Confident</h4>
+        <p class="trait-desc">Knows what it does best</p>
+      </div>
+      <div class="trait-card">
+        <span class="trait-emoji">🧪</span>
+        <h4 class="trait-name" style="color:var(--mint)">Smart</h4>
+        <p class="trait-desc">Ingredient-forward, science-backed</p>
+      </div>
+      <div class="trait-card">
+        <span class="trait-emoji">🌈</span>
+        <h4 class="trait-name" style="color:var(--sun)">Inclusive</h4>
+        <p class="trait-desc">Every skin, every body</p>
+      </div>
+    </div>
+    <!-- Taglines -->
+    <div class="tagline-box">
+      <p class="tagline-label">Tagline options</p>
+      <div class="tagline-row">
+        <span class="tagline-num">01</span>
+        <span class="tagline-text">Salon results at home.</span>
+        <span class="tagline-rec">recommended</span>
+      </div>
+      <div class="tagline-row">
+        <span class="tagline-num">02</span>
+        <span class="tagline-text muted">Your skin's quick fix.</span>
+      </div>
+      <div class="tagline-row">
+        <span class="tagline-num">03</span>
+        <span class="tagline-text muted">Self-care, simplified.</span>
+      </div>
+      <div class="tagline-row" style="margin-bottom:0">
+        <span class="tagline-num">04</span>
+        <span class="tagline-text muted">Good skin, no drama.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     COLOR SYSTEM
+══════════════════════════════════════════════ -->
+<section id="colors">
+  <!-- Wave divider -->
+  <svg width="100%" height="60" viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;margin-bottom:60px">
+    <path d="M0,30C240,60,480,0,720,30C960,60,1200,0,1440,30L1440,60L0,60Z" fill="#B8E0D2" opacity=".3"/>
+    <path d="M0,40C300,10,600,50,900,30C1200,10,1350,50,1440,35L1440,60L0,60Z" fill="#B8E0D2" opacity=".15"/>
+  </svg>
+  <div class="wrap" style="padding:0 24px 100px">
+    <p class="label">Color System</p>
+    <h2 class="section-h2">Vibrant, <span style="font-style:italic;background:linear-gradient(135deg,#FFB5A7,#B8E0D2,#D4C5F9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">alive,</span> unmistakable</h2>
+    <!-- 6 swatches -->
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-box" style="background:#FFB5A7">
+          <svg width="60" height="60" viewBox="0 0 80 80" style="position:absolute;bottom:-15px;right:-15px;opacity:.2" fill="none">
+            <ellipse cx="40" cy="40" rx="12" ry="22" fill="white" transform="rotate(0 40 40)"/>
+            <ellipse cx="40" cy="40" rx="12" ry="22" fill="white" transform="rotate(60 40 40)"/>
+            <ellipse cx="40" cy="40" rx="12" ry="22" fill="white" transform="rotate(120 40 40)"/>
+            <circle cx="40" cy="40" r="8" fill="white"/>
+          </svg>
+        </div>
+        <div class="color-info">
+          <p class="color-name">Peach Glow</p>
+          <p class="color-hex">#FFB5A7</p>
+          <p class="color-role">Primary accent</p>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background:#F28482"></div>
+        <div class="color-info">
+          <p class="color-name">Deep Coral</p>
+          <p class="color-hex">#F28482</p>
+          <p class="color-role">CTA / Energy</p>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background:#B8E0D2">
+          <svg width="60" height="60" viewBox="0 0 80 80" style="position:absolute;bottom:-15px;right:-15px;opacity:.2" fill="none">
+            <ellipse cx="40" cy="40" rx="12" ry="22" fill="white" transform="rotate(60 40 40)"/>
+            <ellipse cx="40" cy="40" rx="12" ry="22" fill="white" transform="rotate(120 40 40)"/>
+            <ellipse cx="40" cy="40" rx="12" ry="22" fill="white" transform="rotate(180 40 40)"/>
+            <circle cx="40" cy="40" r="8" fill="white"/>
+          </svg>
+        </div>
+        <div class="color-info">
+          <p class="color-name">Fresh Mint</p>
+          <p class="color-hex">#B8E0D2</p>
+          <p class="color-role">Balance / Clean</p>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background:#D4C5F9"></div>
+        <div class="color-info">
+          <p class="color-name">Soft Lavender</p>
+          <p class="color-hex">#D4C5F9</p>
+          <p class="color-role">Pampering</p>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background:#FFD166"></div>
+        <div class="color-info">
+          <p class="color-name">Sunshine</p>
+          <p class="color-hex">#FFD166</p>
+          <p class="color-role">Protection / Warmth</p>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background:#1E1E2E"></div>
+        <div class="color-info">
+          <p class="color-name">Midnight</p>
+          <p class="color-hex">#1E1E2E</p>
+          <p class="color-role">Premium dark</p>
+        </div>
+      </div>
+    </div>
+    <!-- Category mapping -->
+    <div class="cat-map-box">
+      <p class="cat-map-label">Product line color mapping</p>
+      <div class="cat-grid">
+        <div class="cat-row" style="background:#EDF6FA">
+          <div class="cat-dot" style="background:#5BA4C9"></div>
+          <div>
+            <p class="cat-line">Skin Fix</p>
+            <p class="cat-products">Acne Patches, Nose Strips</p>
+          </div>
+        </div>
+        <div class="cat-row" style="background:#FDF0EC">
+          <div class="cat-dot" style="background:#E8937A"></div>
+          <div>
+            <p class="cat-line">Skin Smooth</p>
+            <p class="cat-products">Wax Strips, Hair Removal</p>
+          </div>
+        </div>
+        <div class="cat-row" style="background:#F5EFF8">
+          <div class="cat-dot" style="background:#C4A0D4"></div>
+          <div>
+            <p class="cat-line">Skin Pamper</p>
+            <p class="cat-products">Masks, Under Eye Pads</p>
+          </div>
+        </div>
+        <div class="cat-row" style="background:#FDF8E8">
+          <div class="cat-dot" style="background:#E8C94A"></div>
+          <div>
+            <p class="cat-line">Skin Protect</p>
+            <p class="cat-products">Sunblock SPF 60</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     TYPOGRAPHY
+══════════════════════════════════════════════ -->
+<section id="typography">
+  <div class="wrap" style="padding:100px 24px">
+    <p class="label">Typography</p>
+    <div class="typo-grid">
+      <!-- Fraunces -->
+      <div class="typo-card">
+        <div class="deco" style="top:10px;right:10px;opacity:.2">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+            <path d="M30 5C15 15,5 30,15 50C20 45,25 35,30 25C35 35,40 45,45 50C55 30,45 15,30 5Z" fill="#B8E0D2" opacity=".7"/>
+          </svg>
+        </div>
+        <p class="typo-cat" style="color:#F28482">Display</p>
+        <h3 class="typo-big" style="font-family:var(--Fd);font-size:44px;color:var(--dark)">Fraunces</h3>
+        <p class="typo-italic-sub" style="font-family:var(--Fd);font-size:28px;font-style:italic;font-weight:500;color:#F28482">Warm &amp; characterful</p>
+        <p class="typo-desc">A soft serif with personality. Used for headlines, product names, and the logo. Its italic adds warmth that stock-standard fonts can't match.</p>
+      </div>
+      <!-- Sora -->
+      <div class="typo-card">
+        <div class="deco" style="top:15px;right:15px;opacity:.2">
+          <svg width="45" height="45" viewBox="0 0 40 40" fill="none">
+            <path d="M20 2L23 15L36 12L25 20L36 28L23 25L20 38L17 25L4 28L15 20L4 12L17 15Z" fill="#D4C5F9" opacity=".7"/>
+          </svg>
+        </div>
+        <p class="typo-cat" style="color:#A78BDB">Body / UI</p>
+        <h3 class="typo-big" style="font-family:var(--Fb);font-size:44px;font-weight:300;color:var(--dark)">Sora</h3>
+        <p class="typo-italic-sub" style="font-size:24px;font-weight:600;color:#A78BDB">Modern &amp; geometric</p>
+        <p class="typo-desc">Clean geometric sans for everything else: body copy, packaging details, navigation, social captions. Pairs perfectly with Fraunces.</p>
+      </div>
+    </div>
+    <!-- Logo demos -->
+    <div class="logo-demo-bar">
+      <div class="deco" style="top:-20px;left:-20px;opacity:.1">
+        <svg width="100" height="100" viewBox="0 0 80 80" fill="none">
+          <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(0 40 40)"/>
+          <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(60 40 40)"/>
+          <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(120 40 40)"/>
+          <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(180 40 40)"/>
+          <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(240 40 40)"/>
+          <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".25" transform="rotate(300 40 40)"/>
+          <circle cx="40" cy="40" r="8" fill="#FFB5A7" opacity=".5"/>
+        </svg>
+      </div>
+      <!-- dark -->
+      <div style="text-align:center">
+        <p class="demo-label">Dark mode</p>
+        <h2 style="font-family:var(--Fd);font-size:36px;font-weight:400;line-height:0.95;letter-spacing:-0.02em;color:#fff">soft<span class="logo-italic" style="font-size:36px">touch</span><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#FFB5A7,#F4A836);margin-left:3px;vertical-align:super"></span></h2>
+        <p style="font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:300;color:rgba(255,255,255,0.53);margin-top:8px">salon results at home</p>
+      </div>
+      <div class="logo-divider"></div>
+      <!-- light -->
+      <div class="logo-light-box">
+        <p class="demo-label">Light mode</p>
+        <h2 style="font-family:var(--Fd);font-size:36px;font-weight:400;line-height:0.95;letter-spacing:-0.02em;color:var(--dark)">soft<span class="logo-italic" style="font-size:36px">touch</span><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#FFB5A7,#F4A836);margin-left:3px;vertical-align:super"></span></h2>
+        <p style="font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:300;color:var(--grey);margin-top:8px">salon results at home</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     PRODUCT SHOWCASE — 14 SKUs, 4 Worlds
+══════════════════════════════════════════════ -->
+<section id="products">
+  <div class="wrap" style="padding:100px 24px">
+    <div class="products-head">
+      <p class="label">Product Range</p>
+      <h2 style="font-family:var(--Fd);font-size:clamp(28px,4vw,44px);font-weight:400;color:var(--dark);line-height:1.2">
+        14 SKUs, <span style="font-style:italic;color:#F28482">4 worlds</span>
+      </h2>
+    </div>
+    <div class="product-grid">
+
+      <!-- 1 Invisible Acne Patch -->
+      <div class="prod-card">
+        <div class="prod-top" style="background:#EDF6FA">
+          <div class="prod-blob">
+            <svg width="180" height="180" viewBox="0 0 200 200"><path d="M44.5,-51.3C55.8,-39.8,62,-23.7,63.7,-7.2C65.3,9.3,62.5,26.1,53.1,38.4C43.7,50.6,27.8,58.3,11.1,60.7C-5.5,63,-22.9,60,-36.1,51.1C-49.3,42.2,-58.3,27.4,-61.5,11.2C-64.7,-5,-62.1,-22.6,-52.5,-34.7C-42.9,-46.8,-26.3,-53.4,-9.5,-54.6C7.3,-55.8,33.2,-62.8,44.5,-51.3Z" transform="translate(100 100)" fill="#5BA4C9" opacity=".15"/></svg>
+          </div>
+          <div class="prod-cat-pill" style="background:rgba(91,164,201,0.18)"><span class="prod-cat-text">Skin Fix</span></div>
+          <div class="prod-bottle-wrap">
+            <div class="prod-bottle" style="background:linear-gradient(145deg,rgba(255,255,255,0.8),rgba(91,164,201,0.27));border-color:rgba(91,164,201,0.33)">
+              <span class="prod-bottle-logo-st">soft<span class="prod-bottle-logo-it">touch</span></span>
+              <div class="prod-bottle-line" style="background:#5BA4C9"></div>
+              <span class="prod-bottle-name">Invisible Acne Patch</span>
+            </div>
+          </div>
+          <p class="prod-ingredient">Hydrocolloid</p>
+        </div>
+        <div class="prod-bottom">
+          <p class="prod-name">Invisible Acne Patch</p>
+          <p class="prod-count">72 Patches</p>
+        </div>
+      </div>
+
+      <!-- 2 Body Wax Strips -->
+      <div class="prod-card">
+        <div class="prod-top" style="background:#FDF0EC">
+          <div class="prod-blob">
+            <svg width="180" height="180" viewBox="0 0 200 200"><path d="M44.5,-51.3C55.8,-39.8,62,-23.7,63.7,-7.2C65.3,9.3,62.5,26.1,53.1,38.4C43.7,50.6,27.8,58.3,11.1,60.7C-5.5,63,-22.9,60,-36.1,51.1C-49.3,42.2,-58.3,27.4,-61.5,11.2C-64.7,-5,-62.1,-22.6,-52.5,-34.7C-42.9,-46.8,-26.3,-53.4,-9.5,-54.6C7.3,-55.8,33.2,-62.8,44.5,-51.3Z" transform="translate(100 100)" fill="#E8937A" opacity=".15"/></svg>
+          </div>
+          <div class="prod-cat-pill" style="background:rgba(232,147,122,0.18)"><span class="prod-cat-text">Skin Smooth</span></div>
+          <div class="prod-bottle-wrap">
+            <div class="prod-bottle" style="background:linear-gradient(145deg,rgba(255,255,255,0.8),rgba(232,147,122,0.27));border-color:rgba(232,147,122,0.33)">
+              <span class="prod-bottle-logo-st">soft<span class="prod-bottle-logo-it">touch</span></span>
+              <div class="prod-bottle-line" style="background:#E8937A"></div>
+              <span class="prod-bottle-name">Body Wax Strips</span>
+            </div>
+          </div>
+          <p class="prod-ingredient">Aloe Vera &amp; Chamomile</p>
+        </div>
+        <div class="prod-bottom">
+          <p class="prod-name">Body Wax Strips</p>
+          <p class="prod-count">24 Strips</p>
+        </div>
+      </div>
+
+      <!-- 3 Hydrating Foot Mask -->
+      <div class="prod-card">
+        <div class="prod-top" style="background:#F5EFF8">
+          <div class="prod-blob">
+            <svg width="180" height="180" viewBox="0 0 200 200"><path d="M44.5,-51.3C55.8,-39.8,62,-23.7,63.7,-7.2C65.3,9.3,62.5,26.1,53.1,38.4C43.7,50.6,27.8,58.3,11.1,60.7C-5.5,63,-22.9,60,-36.1,51.1C-49.3,42.2,-58.3,27.4,-61.5,11.2C-64.7,-5,-62.1,-22.6,-52.5,-34.7C-42.9,-46.8,-26.3,-53.4,-9.5,-54.6C7.3,-55.8,33.2,-62.8,44.5,-51.3Z" transform="translate(100 100)" fill="#C4A0D4" opacity=".15"/></svg>
+          </div>
+          <div class="prod-cat-pill" style="background:rgba(196,160,212,0.18)"><span class="prod-cat-text">Skin Pamper</span></div>
+          <div class="prod-bottle-wrap">
+            <div class="prod-bottle" style="background:linear-gradient(145deg,rgba(255,255,255,0.8),rgba(196,160,212,0.27));border-color:rgba(196,160,212,0.33)">
+              <span class="prod-bottle-logo-st">soft<span class="prod-bottle-logo-it">touch</span></span>
+              <div class="prod-bottle-line" style="background:#C4A0D4"></div>
+              <span class="prod-bottle-name">Hydrating Foot Mask</span>
+            </div>
+          </div>
+          <p class="prod-ingredient">Shea &amp; Lavender</p>
+        </div>
+        <div class="prod-bottom">
+          <p class="prod-name">Hydrating Foot Mask</p>
+          <p class="prod-count">1 Pair</p>
+        </div>
+      </div>
+
+      <!-- 4 Sunblock SPF 60 -->
+      <div class="prod-card">
+        <div class="prod-top" style="background:#FDF8E8">
+          <div class="prod-blob">
+            <svg width="180" height="180" viewBox="0 0 200 200"><path d="M44.5,-51.3C55.8,-39.8,62,-23.7,63.7,-7.2C65.3,9.3,62.5,26.1,53.1,38.4C43.7,50.6,27.8,58.3,11.1,60.7C-5.5,63,-22.9,60,-36.1,51.1C-49.3,42.2,-58.3,27.4,-61.5,11.2C-64.7,-5,-62.1,-22.6,-52.5,-34.7C-42.9,-46.8,-26.3,-53.4,-9.5,-54.6C7.3,-55.8,33.2,-62.8,44.5,-51.3Z" transform="translate(100 100)" fill="#E8C94A" opacity=".15"/></svg>
+          </div>
+          <div class="prod-cat-pill" style="background:rgba(232,201,74,0.18)"><span class="prod-cat-text">Skin Protect</span></div>
+          <div class="prod-bottle-wrap">
+            <div class="prod-bottle" style="background:linear-gradient(145deg,rgba(255,255,255,0.8),rgba(232,201,74,0.27));border-color:rgba(232,201,74,0.33)">
+              <span class="prod-bottle-logo-st">soft<span class="prod-bottle-logo-it">touch</span></span>
+              <div class="prod-bottle-line" style="background:#E8C94A"></div>
+              <span class="prod-bottle-name">Sunblock SPF 60</span>
+            </div>
+          </div>
+          <p class="prod-ingredient">Zinc Oxide + Dimethicone</p>
+        </div>
+        <div class="prod-bottom">
+          <p class="prod-name">Sunblock SPF 60</p>
+          <p class="prod-count">100g</p>
+        </div>
+      </div>
+
+      <!-- 5 Charcoal Nose Strips -->
+      <div class="prod-card">
+        <div class="prod-top" style="background:#EDF6FA">
+          <div class="prod-blob">
+            <svg width="180" height="180" viewBox="0 0 200 200"><path d="M44.5,-51.3C55.8,-39.8,62,-23.7,63.7,-7.2C65.3,9.3,62.5,26.1,53.1,38.4C43.7,50.6,27.8,58.3,11.1,60.7C-5.5,63,-22.9,60,-36.1,51.1C-49.3,42.2,-58.3,27.4,-61.5,11.2C-64.7,-5,-62.1,-22.6,-52.5,-34.7C-42.9,-46.8,-26.3,-53.4,-9.5,-54.6C7.3,-55.8,33.2,-62.8,44.5,-51.3Z" transform="translate(100 100)" fill="#5BA4C9" opacity=".15"/></svg>
+          </div>
+          <div class="prod-cat-pill" style="background:rgba(91,164,201,0.18)"><span class="prod-cat-text">Skin Fix</span></div>
+          <div class="prod-bottle-wrap">
+            <div class="prod-bottle" style="background:linear-gradient(145deg,rgba(255,255,255,0.8),rgba(91,164,201,0.27));border-color:rgba(91,164,201,0.33)">
+              <span class="prod-bottle-logo-st">soft<span class="prod-bottle-logo-it">touch</span></span>
+              <div class="prod-bottle-line" style="background:#5BA4C9"></div>
+              <span class="prod-bottle-name">Charcoal Nose Strips</span>
+            </div>
+          </div>
+          <p class="prod-ingredient">Activated Charcoal</p>
+        </div>
+        <div class="prod-bottom">
+          <p class="prod-name">Charcoal Nose Strips</p>
+          <p class="prod-count">5 Strips</p>
+        </div>
+      </div>
+
+      <!-- 6 Under Eye Pads -->
+      <div class="prod-card">
+        <div class="prod-top" style="background:#F5EFF8">
+          <div class="prod-blob">
+            <svg width="180" height="180" viewBox="0 0 200 200"><path d="M44.5,-51.3C55.8,-39.8,62,-23.7,63.7,-7.2C65.3,9.3,62.5,26.1,53.1,38.4C43.7,50.6,27.8,58.3,11.1,60.7C-5.5,63,-22.9,60,-36.1,51.1C-49.3,42.2,-58.3,27.4,-61.5,11.2C-64.7,-5,-62.1,-22.6,-52.5,-34.7C-42.9,-46.8,-26.3,-53.4,-9.5,-54.6C7.3,-55.8,33.2,-62.8,44.5,-51.3Z" transform="translate(100 100)" fill="#C4A0D4" opacity=".15"/></svg>
+          </div>
+          <div class="prod-cat-pill" style="background:rgba(196,160,212,0.18)"><span class="prod-cat-text">Skin Pamper</span></div>
+          <div class="prod-bottle-wrap">
+            <div class="prod-bottle" style="background:linear-gradient(145deg,rgba(255,255,255,0.8),rgba(196,160,212,0.27));border-color:rgba(196,160,212,0.33)">
+              <span class="prod-bottle-logo-st">soft<span class="prod-bottle-logo-it">touch</span></span>
+              <div class="prod-bottle-line" style="background:#C4A0D4"></div>
+              <span class="prod-bottle-name">Under Eye Pads</span>
+            </div>
+          </div>
+          <p class="prod-ingredient">Niacinamide 5%</p>
+        </div>
+        <div class="prod-bottom">
+          <p class="prod-name">Under Eye Pads</p>
+          <p class="prod-count">5 Pairs</p>
+        </div>
+      </div>
+
+      <!-- 7 Facial Wax Strips -->
+      <div class="prod-card">
+        <div class="prod-top" style="background:#FDF0EC">
+          <div class="prod-blob">
+            <svg width="180" height="180" viewBox="0 0 200 200"><path d="M44.5,-51.3C55.8,-39.8,62,-23.7,63.7,-7.2C65.3,9.3,62.5,26.1,53.1,38.4C43.7,50.6,27.8,58.3,11.1,60.7C-5.5,63,-22.9,60,-36.1,51.1C-49.3,42.2,-58.3,27.4,-61.5,11.2C-64.7,-5,-62.1,-22.6,-52.5,-34.7C-42.9,-46.8,-26.3,-53.4,-9.5,-54.6C7.3,-55.8,33.2,-62.8,44.5,-51.3Z" transform="translate(100 100)" fill="#E8937A" opacity=".15"/></svg>
+          </div>
+          <div class="prod-cat-pill" style="background:rgba(232,147,122,0.18)"><span class="prod-cat-text">Skin Smooth</span></div>
+          <div class="prod-bottle-wrap">
+            <div class="prod-bottle" style="background:linear-gradient(145deg,rgba(255,255,255,0.8),rgba(232,147,122,0.27));border-color:rgba(232,147,122,0.33)">
+              <span class="prod-bottle-logo-st">soft<span class="prod-bottle-logo-it">touch</span></span>
+              <div class="prod-bottle-line" style="background:#E8937A"></div>
+              <span class="prod-bottle-name">Facial Wax Strips</span>
+            </div>
+          </div>
+          <p class="prod-ingredient">Aloe &amp; Gotukola</p>
+        </div>
+        <div class="prod-bottom">
+          <p class="prod-name">Facial Wax Strips</p>
+          <p class="prod-count">20 Strips</p>
+        </div>
+      </div>
+
+      <!-- 8 Microneedle Patch -->
+      <div class="prod-card">
+        <div class="prod-top" style="background:#EDF6FA">
+          <div class="prod-blob">
+            <svg width="180" height="180" viewBox="0 0 200 200"><path d="M44.5,-51.3C55.8,-39.8,62,-23.7,63.7,-7.2C65.3,9.3,62.5,26.1,53.1,38.4C43.7,50.6,27.8,58.3,11.1,60.7C-5.5,63,-22.9,60,-36.1,51.1C-49.3,42.2,-58.3,27.4,-61.5,11.2C-64.7,-5,-62.1,-22.6,-52.5,-34.7C-42.9,-46.8,-26.3,-53.4,-9.5,-54.6C7.3,-55.8,33.2,-62.8,44.5,-51.3Z" transform="translate(100 100)" fill="#5BA4C9" opacity=".15"/></svg>
+          </div>
+          <div class="prod-cat-pill" style="background:rgba(91,164,201,0.18)"><span class="prod-cat-text">Skin Fix</span></div>
+          <div class="prod-bottle-wrap">
+            <div class="prod-bottle" style="background:linear-gradient(145deg,rgba(255,255,255,0.8),rgba(91,164,201,0.27));border-color:rgba(91,164,201,0.33)">
+              <span class="prod-bottle-logo-st">soft<span class="prod-bottle-logo-it">touch</span></span>
+              <div class="prod-bottle-line" style="background:#5BA4C9"></div>
+              <span class="prod-bottle-name">Microneedle Patch</span>
+            </div>
+          </div>
+          <p class="prod-ingredient">Microneedle Technology</p>
+        </div>
+        <div class="prod-bottom">
+          <p class="prod-name">Microneedle Patch</p>
+          <p class="prod-count">6 Patches</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SOCIAL MOCKUP
+══════════════════════════════════════════════ -->
+<section id="social">
+  <div class="wrap" style="padding:100px 24px">
+    <div class="social-head">
+      <p class="label">Social-First DNA</p>
+      <h2 style="font-family:var(--Fd);font-size:clamp(28px,4vw,44px);font-weight:400;color:var(--dark);line-height:1.2">
+        Designed to be <span style="font-style:italic;color:#F28482">shared</span>
+      </h2>
+    </div>
+    <div class="insta-grid">
+      <div class="insta-post" style="background:linear-gradient(135deg,#FFB5A7,#F28482)">
+        <span class="insta-emoji">✨</span>
+        <p class="insta-title" style="color:#fff">New Drop</p>
+        <p class="insta-sub" style="color:rgba(255,255,255,0.7)">Acne Patches</p>
+      </div>
+      <div class="insta-post" style="background:#FFF8F0">
+        <span class="insta-emoji">👃</span>
+        <p class="insta-title" style="color:var(--dark)">How-to</p>
+        <p class="insta-sub" style="color:var(--grey)">Nose Strips 101</p>
+      </div>
+      <div class="insta-post" style="background:linear-gradient(135deg,#B8E0D2,#72B89E)">
+        <span class="insta-emoji">🦶</span>
+        <p class="insta-title" style="color:#fff">Glow Up</p>
+        <p class="insta-sub" style="color:rgba(255,255,255,0.7)">Foot Mask</p>
+      </div>
+      <div class="insta-post" style="background:#1E1E2E">
+        <span class="insta-emoji">📸</span>
+        <p class="insta-title" style="color:#fff">Before/After</p>
+        <p class="insta-sub" style="color:rgba(255,255,255,0.5)">Real Results</p>
+      </div>
+      <div class="insta-post" style="background:linear-gradient(135deg,#D4C5F9,#A78BDB)">
+        <span class="insta-emoji">💆</span>
+        <p class="insta-title" style="color:#fff">Self-Care</p>
+        <p class="insta-sub" style="color:rgba(255,255,255,0.7)">Sunday Ritual</p>
+      </div>
+      <div class="insta-post" style="background:linear-gradient(135deg,#FFD166,#F4A836)">
+        <span class="insta-emoji">☀️</span>
+        <p class="insta-title" style="color:#fff">SPF Check</p>
+        <p class="insta-sub" style="color:rgba(255,255,255,0.7)">Daily Sunblock</p>
+      </div>
+      <div class="insta-post" style="background:#FFF8F0">
+        <span class="insta-emoji">🔬</span>
+        <p class="insta-title" style="color:var(--dark)">Ingredients</p>
+        <p class="insta-sub" style="color:var(--grey)">Hydrocolloid</p>
+      </div>
+      <div class="insta-post" style="background:linear-gradient(135deg,#FFB5A7,#D4C5F9)">
+        <span class="insta-emoji">🎁</span>
+        <p class="insta-title" style="color:#fff">Combo</p>
+        <p class="insta-sub" style="color:rgba(255,255,255,0.7)">Fix + Pamper</p>
+      </div>
+      <div class="insta-post" style="background:#1E1E2E">
+        <span class="insta-emoji">🌿</span>
+        <p class="insta-title" style="color:#fff">softtouch</p>
+        <p class="insta-sub" style="color:rgba(255,255,255,0.5)">@softtouch.skin</p>
+      </div>
+    </div>
+    <p class="social-caption">Every post, every story, every reel feels unmistakably SoftTouch. Category colors, custom illustrations, and consistent typography make the feed instantly recognizable.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     COMPETITOR GRID
+══════════════════════════════════════════════ -->
+<section id="competitors">
+  <div class="wrap" style="padding:100px 24px">
+    <p class="label">Competitive Space</p>
+    <h2 class="section-h2">Where <span class="italic-grad">softtouch</span> fits</h2>
+    <div class="comp-grid">
+      <div class="comp-card">
+        <h4 class="comp-name">ClayCo</h4>
+        <p class="comp-vibe">Japanese rituals, premium, editorial</p>
+        <div class="comp-gap-box"><p class="comp-gap">Niche positioning, higher price</p></div>
+      </div>
+      <div class="comp-card">
+        <h4 class="comp-name">FURR</h4>
+        <p class="comp-vibe">Bold, fun, no-shame grooming</p>
+        <div class="comp-gap-box"><p class="comp-gap">Hair removal focused, less skincare</p></div>
+      </div>
+      <div class="comp-card">
+        <h4 class="comp-name">Minimalist</h4>
+        <p class="comp-vibe">Science-first, clinical</p>
+        <div class="comp-gap-box"><p class="comp-gap">Too serious, no personality</p></div>
+      </div>
+      <div class="comp-card">
+        <h4 class="comp-name">Dot &amp; Key</h4>
+        <p class="comp-vibe">Colorful, Gen Z energy</p>
+        <div class="comp-gap-box"><p class="comp-gap">Crowded range, less focused</p></div>
+      </div>
+      <div class="comp-card highlight" style="position:relative;overflow:hidden">
+        <div style="position:absolute;top:-10px;right:-10px;opacity:.15">
+          <svg width="60" height="60" viewBox="0 0 80 80" fill="none">
+            <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".5" transform="rotate(0 40 40)"/>
+            <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".5" transform="rotate(60 40 40)"/>
+            <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".5" transform="rotate(120 40 40)"/>
+            <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".5" transform="rotate(180 40 40)"/>
+            <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".5" transform="rotate(240 40 40)"/>
+            <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".5" transform="rotate(300 40 40)"/>
+            <circle cx="40" cy="40" r="8" fill="#FFB5A7" opacity=".7"/>
+          </svg>
+        </div>
+        <h4 class="comp-name disp">softtouch</h4>
+        <p class="comp-vibe light">Quick fixes, salon at home, vibrant</p>
+        <div class="comp-gap-box highlight"><p class="comp-gap hl">THE white space opportunity</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<section id="footer-section">
+  <div class="deco" style="top:-30px;left:10%;opacity:.08">
+    <svg width="120" height="120" viewBox="0 0 80 80" fill="none">
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".5" transform="rotate(0 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".5" transform="rotate(60 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".5" transform="rotate(120 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".5" transform="rotate(180 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".5" transform="rotate(240 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#FFB5A7" opacity=".5" transform="rotate(300 40 40)"/>
+      <circle cx="40" cy="40" r="8" fill="#FFB5A7" opacity=".7"/>
+    </svg>
+  </div>
+  <div class="deco" style="bottom:-20px;right:15%;opacity:.08">
+    <svg width="100" height="100" viewBox="0 0 80 80" fill="none">
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#D4C5F9" opacity=".5" transform="rotate(0 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#D4C5F9" opacity=".5" transform="rotate(60 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#D4C5F9" opacity=".5" transform="rotate(120 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#D4C5F9" opacity=".5" transform="rotate(180 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#D4C5F9" opacity=".5" transform="rotate(240 40 40)"/>
+      <ellipse cx="40" cy="40" rx="12" ry="22" fill="#D4C5F9" opacity=".5" transform="rotate(300 40 40)"/>
+      <circle cx="40" cy="40" r="8" fill="#D4C5F9" opacity=".7"/>
+    </svg>
+  </div>
+  <div class="deco" style="bottom:10px;left:5%;opacity:.1;transform:rotate(15deg)">
+    <svg width="70" height="70" viewBox="0 0 60 60" fill="none">
+      <path d="M30 5C15 15,5 30,15 50C20 45,25 35,30 25C35 35,40 45,45 50C55 30,45 15,30 5Z" fill="#B8E0D2" opacity=".7"/>
+    </svg>
+  </div>
+
+  <div style="position:relative;z-index:2">
+    <!-- Footer logo -->
+    <div style="text-align:center">
+      <div class="logo-deco" style="top:-20px;left:calc(50% - 200px);transform:rotate(-30deg);opacity:.6">
+        <svg width="50" height="50" viewBox="0 0 60 60" fill="none">
+          <path d="M30 5C15 15,5 30,15 50C20 45,25 35,30 25C35 35,40 45,45 50C55 30,45 15,30 5Z" fill="#B8E0D2" opacity=".7"/>
+          <path d="M30 15L30 45" stroke="#B8E0D299" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <h1 class="logo-h1">soft<span class="logo-italic">touch</span><span class="logo-dot"></span></h1>
+      <p class="logo-tag" style="font-size:12px;color:rgba(255,255,255,0.53)">salon results at home</p>
+    </div>
+    <!-- Stats -->
+    <div class="footer-stats">
+      <div>
+        <p class="stat-val">14 SKUs</p>
+        <p class="stat-desc">across 4 lines</p>
+      </div>
+      <div>
+        <p class="stat-val">18-35</p>
+        <p class="stat-desc">primary audience</p>
+      </div>
+      <div>
+        <p class="stat-val">INR 99-499</p>
+        <p class="stat-desc">accessible premium</p>
+      </div>
+      <div>
+        <p class="stat-val">Social-first</p>
+        <p class="stat-desc">design DNA</p>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <p class="footer-credit">Venus Bioceuticals Pvt. Ltd. | Brand Concept 2026</p>
+  </div>
+</section>
+
+<script>
+function showBA(tab) {
+  var before = document.getElementById('baBefore');
+  var after  = document.getElementById('baAfter');
+  var btnB   = document.getElementById('btnBefore');
+  var btnA   = document.getElementById('btnAfter');
+  if (tab === 'before') {
+    before.classList.add('show'); before.classList.remove('hide');
+    after.classList.remove('show'); after.classList.add('hide');
+    btnB.classList.add('active'); btnA.classList.remove('active');
+  } else {
+    after.classList.add('show'); after.classList.remove('hide');
+    before.classList.remove('show'); before.classList.add('hide');
+    btnB.classList.remove('active'); btnA.classList.add('active');
+  }
+}
+</script>
+</body>
+</html>
